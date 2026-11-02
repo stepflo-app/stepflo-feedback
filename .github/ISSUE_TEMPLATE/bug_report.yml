@@ -1,0 +1,39 @@
+name: Bug report
+description: Something broke. Tell us what happened and what you expected.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it happen?
+      options:
+        - "Local console (builder)"
+        - "Web app (app.stepflo.ai)"
+        - "Marketing site (stepflo.ai)"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Plain words. What you did, and what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: input
+    id: version
+    attributes:
+      label: Version and OS
+      placeholder: "e.g. builder v0.3.1 on macOS 15"
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Safe to share
+      options:
+        - label: "This report is safe to share publicly (no private data included)."
+    validations:
+      required: true

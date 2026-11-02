@@ -1,0 +1,28 @@
+name: Feature request
+description: Something Stepflo should do.
+title: "[feature] "
+labels: ["feature-request"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The job, in your words — not the feature.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How should it work?
+  - type: textarea
+    id: alternative
+    attributes:
+      label: What do you do today instead?
+  - type: checkboxes
+    id: public
+    attributes:
+      label: Safe to share
+      options:
+        - label: "This request is safe to share publicly (no private data included)."
+    validations:
+      required: true
